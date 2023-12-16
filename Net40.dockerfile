@@ -1,7 +1,7 @@
 ﻿
 
 
-FROM mcr.microsoft.com/windows/nanoserver:1809
+FROM mcr.microsoft.com/dotnet/framework/runtime:3.5
 
 
 
