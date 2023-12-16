@@ -21,7 +21,7 @@ jobs:
             run: |
             
                 docker build -f Net40.dockerfile -t net40 .
-                docker run net40
+                docker run net40 0.exe
           
           - name: temp
             run: |
