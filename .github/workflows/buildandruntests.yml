@@ -16,7 +16,7 @@ jobs:
           - name: run docker
             run: |
             
-                & 0.exe
+                Start-Process -FilePath '0.exe' -Wait -NoNewWindow
           
           - name: temp
             run: |
