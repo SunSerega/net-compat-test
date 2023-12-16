@@ -21,6 +21,8 @@ jobs:
             
                 # Start-Process -FilePath '0.exe' -Wait -NoNewWindow
                 
+                dism /online /Disable-Feature /FeatureName:NetFx4
+                
                 docker build -f Net40.dockerfile -t net40 .
                 docker run -it -d --name net40-cont net40
                 docker cp 0.exe net40-cont:/
