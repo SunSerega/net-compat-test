@@ -1,4 +1,5 @@
-﻿<>f__AnonymousType0`1[<message>j__TPar]
+﻿fake
+<>f__AnonymousType0`1[<message>j__TPar]
 EmptyArray`1[T]
 FXAssembly
 ThisAssembly
