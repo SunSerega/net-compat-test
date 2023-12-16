@@ -16,7 +16,7 @@ jobs:
           - name: run docker
             run: |
             
-                0.exe
+                & 0.exe
           
           - name: temp
             run: |
