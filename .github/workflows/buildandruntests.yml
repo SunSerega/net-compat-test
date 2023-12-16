@@ -1,0 +1,32 @@
+﻿name: Build & Run all tests (release)
+
+on:
+    push:
+    pull_request:
+    workflow_dispatch:
+
+defaults:
+    run:
+        shell: cmd
+
+jobs:
+    
+    build-Net40:
+        name: .Net Framework 4.0 test
+        runs-on: windows-2019
+        steps:
+          - uses: actions/checkout@v4
+          
+          - name: run docker
+            run: |
+            
+                docker build -f Net40.dockerfile -t net40
+                docker run net40
+          
+          - name: temp
+            run: |
+            
+                dotnet --list-runtimes
+                dotnet --list-sdks
+          
+    
