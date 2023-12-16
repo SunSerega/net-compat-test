@@ -23,8 +23,8 @@ jobs:
                 
                 docker build -f Net40.dockerfile -t net40 .
                 docker run -d --name net40-cont net40
-                docker cp 0.exe net40-cont:/app/
-                docker exec net40-cont /app/0.exe
+                docker cp 0.exe net40-cont:/
+                docker exec net40-cont /0.exe
           
           - name: temp
             run: |
