@@ -22,9 +22,10 @@ jobs:
                 # Start-Process -FilePath '0.exe' -Wait -NoNewWindow
                 
                 docker build -f Net40.dockerfile -t net40 .
-                docker run -d --name net40-cont net40
+                docker run -it -d --name net40-cont net40
                 docker cp 0.exe net40-cont:/
                 docker exec net40-cont /0.exe
+                docker cp net40-cont:/otp.txt .
           
           - name: temp
             run: |
